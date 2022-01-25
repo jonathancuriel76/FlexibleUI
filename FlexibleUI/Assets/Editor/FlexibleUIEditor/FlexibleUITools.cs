@@ -1,7 +1,6 @@
 using Assets.Scripts.FlexibleUI;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Assets.Editor.FlexibleUIEditor
 {
