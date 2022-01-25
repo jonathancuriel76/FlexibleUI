@@ -1,16 +1,19 @@
-﻿using UnityEditor;
+﻿//using System.IO;
+//using UnityEngine;
+using UnityEditor;
+using Assets.Scripts.FlexibleUI;
 
 namespace Assets.Editor.FlexibleUIEditor
 {
-    [CustomEditor(typeof(Scripts.FlexibleUI.FlexibleUI))]
+    [CustomEditor(typeof(FlexibleUI))]
     [CanEditMultipleObjects]
     public class FlexibleUIEditor : UnityEditor.Editor
     {
-        private Scripts.FlexibleUI.FlexibleUI _flexibleUI;
+        private FlexibleUI _flexibleUI;
 
         private void OnEnable()
         {
-            _flexibleUI = target as Scripts.FlexibleUI.FlexibleUI;
+            _flexibleUI = target as FlexibleUI;
         }
 
         public override void OnInspectorGUI()
@@ -18,8 +21,9 @@ namespace Assets.Editor.FlexibleUIEditor
             _flexibleUI.OnSkinUI();
         }
 
+        // functions that might be useful in the future, but don't really need them at the moment
         /*
-         public string[] GetDataFilePaths(string dataPath, string searchPattern)
+        public string[] GetDataFilePaths(string dataPath, string searchPattern)
         {
             var path = dataPath;
             var pattern = searchPattern;
@@ -38,9 +42,7 @@ namespace Assets.Editor.FlexibleUIEditor
 
             return dataOptions;
         }
-        */
 
-        /*
         // Function used to find all data of type <T> (Flexible UI) in the project.
         public T[] GetDataPresets<T>(string[] dataPaths) where T : ScriptableObject
         {
