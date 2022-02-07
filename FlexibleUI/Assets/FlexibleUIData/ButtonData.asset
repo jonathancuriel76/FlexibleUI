@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: 1
   colors:
-    m_NormalColor: {r: 1, g: 0, b: 0, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 1, a: 1}
     m_HighlightedColor: {r: 0, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 1, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 0, a: 1}

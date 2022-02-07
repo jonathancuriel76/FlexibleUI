@@ -199,7 +199,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 0, b: 0, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 1, a: 1}
     m_HighlightedColor: {r: 0, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 1, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 0, a: 1}
@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 208222273}
   - component: {fileID: 208222275}
   - component: {fileID: 208222274}
+  - component: {fileID: 208222276}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -320,21 +321,21 @@ MonoBehaviour:
   m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0, g: 1, b: 0, a: 1}
+    topRight: {r: 0, g: 1, b: 0, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 0, a: 1}
+    bottomRight: {r: 1, g: 1, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -344,8 +345,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -394,6 +395,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208222272}
   m_CullTransparentMesh: 1
+--- !u!114 &208222276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208222272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfbedfb010b0b064fafb5774d90f16cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tmpData: {fileID: 11400000, guid: 65de75cbe905ea54ca6dbd6215077788, type: 2}
+  text: {fileID: 208222274}
 --- !u!1 &413211414
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +651,7 @@ GameObject:
   - component: {fileID: 677796149}
   - component: {fileID: 677796151}
   - component: {fileID: 677796150}
+  - component: {fileID: 677796152}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -685,21 +701,21 @@ MonoBehaviour:
   m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0, g: 1, b: 0, a: 1}
+    topRight: {r: 0, g: 1, b: 0, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 0, a: 1}
+    bottomRight: {r: 1, g: 1, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -709,8 +725,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -759,6 +775,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677796148}
   m_CullTransparentMesh: 1
+--- !u!114 &677796152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677796148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfbedfb010b0b064fafb5774d90f16cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tmpData: {fileID: 11400000, guid: 65de75cbe905ea54ca6dbd6215077788, type: 2}
+  text: {fileID: 677796150}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,7 +1041,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 0, b: 0, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 1, a: 1}
     m_HighlightedColor: {r: 0, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 1, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 0, a: 1}
@@ -1267,8 +1297,8 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 0, b: 0, a: 1}
-    topRight: {r: 1, g: 0, b: 0, a: 1}
+    topLeft: {r: 0, g: 1, b: 0, a: 1}
+    topRight: {r: 0, g: 1, b: 0, a: 1}
     bottomLeft: {r: 1, g: 1, b: 0, a: 1}
     bottomRight: {r: 1, g: 1, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -1416,8 +1446,8 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 0, b: 0, a: 1}
-    topRight: {r: 1, g: 0, b: 0, a: 1}
+    topLeft: {r: 0, g: 1, b: 0, a: 1}
+    topRight: {r: 0, g: 1, b: 0, a: 1}
     bottomLeft: {r: 1, g: 1, b: 0, a: 1}
     bottomRight: {r: 1, g: 1, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -1580,6 +1610,7 @@ GameObject:
   - component: {fileID: 1901529565}
   - component: {fileID: 1901529567}
   - component: {fileID: 1901529566}
+  - component: {fileID: 1901529568}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1629,21 +1660,21 @@ MonoBehaviour:
   m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0, g: 1, b: 0, a: 1}
+    topRight: {r: 0, g: 1, b: 0, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 0, a: 1}
+    bottomRight: {r: 1, g: 1, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -1653,8 +1684,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1703,6 +1734,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901529564}
   m_CullTransparentMesh: 1
+--- !u!114 &1901529568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901529564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfbedfb010b0b064fafb5774d90f16cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tmpData: {fileID: 11400000, guid: 65de75cbe905ea54ca6dbd6215077788, type: 2}
+  text: {fileID: 1901529566}
 --- !u!1 &1962405421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,8 +1924,8 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 0, b: 0, a: 1}
-    topRight: {r: 1, g: 0, b: 0, a: 1}
+    topLeft: {r: 0, g: 1, b: 0, a: 1}
+    topRight: {r: 0, g: 1, b: 0, a: 1}
     bottomLeft: {r: 1, g: 1, b: 0, a: 1}
     bottomRight: {r: 1, g: 1, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -2018,7 +2063,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 0, b: 0, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 1, a: 1}
     m_HighlightedColor: {r: 0, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 1, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 0, a: 1}

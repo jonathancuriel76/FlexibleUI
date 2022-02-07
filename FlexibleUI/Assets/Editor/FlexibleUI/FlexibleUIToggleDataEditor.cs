@@ -3,43 +3,39 @@ using Assets.Scripts.FlexibleUI;
 using UnityEditor;
 using UnityEngine.UI;
 
-namespace Assets.Editor.FlexibleUIEditor
+namespace Assets.Editor.FlexibleUI
 {
-    [CustomEditor(typeof(FlexibleUISliderData))]
+    [CustomEditor(typeof(FlexibleUIToggleData))]
     [CanEditMultipleObjects]
-    public sealed class FlexibleUISliderDataEditor : UnityEditor.Editor
+    public sealed class FlexibleUIToggleDataEditor : UnityEditor.Editor
     {
         private SerializedProperty _transition;
         private SerializedProperty _colors;
         private SerializedProperty _spriteState;
         private SerializedProperty _animationTriggers;
         private SerializedProperty _navigation;
-        private SerializedProperty _direction;
-        private SerializedProperty _minValue;
-        private SerializedProperty _maxValue;
-        private SerializedProperty _wholeNumbers;
 
-        private FlexibleUISliderData _sliderData;
+        private SerializedProperty _toggleTransition;
+
+        private FlexibleUIToggleData _toggleData;
 
         private void OnEnable()
         {
-            _sliderData = target as FlexibleUISliderData;
             _transition = serializedObject.FindProperty("transition");
             _colors = serializedObject.FindProperty("colors");
             _spriteState = serializedObject.FindProperty("spriteState");
             _animationTriggers = serializedObject.FindProperty("animationTriggers");
             _navigation = serializedObject.FindProperty("navigationMode");
-            _direction = serializedObject.FindProperty("direction");
-            _minValue = serializedObject.FindProperty("minValue");
-            _maxValue = serializedObject.FindProperty("maxValue");
-            _wholeNumbers = serializedObject.FindProperty("wholeNumbers");
+            _toggleTransition = serializedObject.FindProperty("toggleTransition");
+
+            _toggleData = target as FlexibleUIToggleData;
         }
 
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
 
-            EditorGUILayout.LabelField("Slider Data", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("Toggle Data", EditorStyles.boldLabel);
 
             EditorGUI.BeginChangeCheck();
 
@@ -47,7 +43,8 @@ namespace Assets.Editor.FlexibleUIEditor
 
             EditorGUI.indentLevel++;
 
-            switch (_sliderData.transition)
+            // Currently when switching from Color Tint to None/SpriteSwap/Animation, the color tint is retained.
+            switch (_toggleData.transition)
             {
                 case Selectable.Transition.None:
                     break;
@@ -55,6 +52,7 @@ namespace Assets.Editor.FlexibleUIEditor
                     EditorGUILayout.PropertyField(_colors);
                     break;
                 case Selectable.Transition.SpriteSwap:
+
                     EditorGUILayout.PropertyField(_spriteState);
                     break;
                 case Selectable.Transition.Animation:
@@ -67,10 +65,8 @@ namespace Assets.Editor.FlexibleUIEditor
             EditorGUI.indentLevel--;
 
             EditorGUILayout.PropertyField(_navigation);
-            EditorGUILayout.PropertyField(_direction);
-            EditorGUILayout.PropertyField(_minValue);
-            EditorGUILayout.PropertyField(_maxValue);
-            EditorGUILayout.PropertyField(_wholeNumbers);
+
+            EditorGUILayout.PropertyField(_toggleTransition);
 
             if (EditorGUI.EndChangeCheck())
             {

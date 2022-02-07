@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Editor.FlexibleUIEditor
+namespace Assets.Editor.FlexibleUI
 {
     [CustomEditor(typeof(FlexibleUIToggle))]
     [CanEditMultipleObjects]

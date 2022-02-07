@@ -1,7 +1,7 @@
 ﻿using Assets.Scripts.FlexibleUI;
 using UnityEditor;
 
-namespace Assets.Editor.FlexibleUIEditor
+namespace Assets.Editor.FlexibleUI
 {
     [CustomEditor(typeof(FlexibleUIGridLayoutGroupData))]
     [CanEditMultipleObjects]

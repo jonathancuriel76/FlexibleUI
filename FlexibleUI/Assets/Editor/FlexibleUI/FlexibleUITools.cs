@@ -2,7 +2,7 @@ using Assets.Scripts.FlexibleUI;
 using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Editor.FlexibleUIEditor
+namespace Assets.Editor.FlexibleUI
 {
     public static class FlexibleUITools
     {

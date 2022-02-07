@@ -1,26 +1,12 @@
 ﻿//using System.IO;
 //using UnityEngine;
 using UnityEditor;
-using Assets.Scripts.FlexibleUI;
 
-namespace Assets.Editor.FlexibleUIEditor
+namespace Assets.Editor.FlexibleUI
 {
-    [CustomEditor(typeof(FlexibleUI))]
     [CanEditMultipleObjects]
     public class FlexibleUIEditor : UnityEditor.Editor
     {
-        private FlexibleUI _flexibleUI;
-
-        private void OnEnable()
-        {
-            _flexibleUI = target as FlexibleUI;
-        }
-
-        public override void OnInspectorGUI()
-        {
-            _flexibleUI.OnSkinUI();
-        }
-
         // functions that might be useful in the future, but don't really need them at the moment
         /*
         public string[] GetDataFilePaths(string dataPath, string searchPattern)

@@ -6,7 +6,7 @@ using TMPro.EditorUtilities;
 using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Editor.FlexibleUIEditor
+namespace Assets.Editor.FlexibleUI
 {
     [CustomEditor(typeof(FlexibleUITextMeshProData))]
     [CanEditMultipleObjects]

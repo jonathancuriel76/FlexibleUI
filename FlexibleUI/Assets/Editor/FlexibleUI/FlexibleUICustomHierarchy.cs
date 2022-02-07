@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Editor.FlexibleUIEditor
+namespace Assets.Editor.FlexibleUI
 {
     [InitializeOnLoad]
     public class FlexibleUICustomHierarchy : UnityEditor.Editor

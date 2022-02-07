@@ -2,25 +2,25 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Editor.FlexibleUIEditor
+namespace Assets.Editor.FlexibleUI
 {
-    [CustomEditor(typeof(FlexibleUIGridLayoutGroup))]
+    [CustomEditor(typeof(FlexibleUILayoutGroup))]
     [CanEditMultipleObjects]
-    public class FlexibleUIGridLayoutGroupEditor : FlexibleUIEditor
+    public class FlexibleUILayoutGroupEditor : FlexibleUIEditor
     {
-        private SerializedProperty _gridLayoutGroupData;
+        private SerializedProperty _layoutGroupData;
         private Object[] _objects;
 
         private void OnEnable()
         {
-            _gridLayoutGroupData = serializedObject.FindProperty("gridLayoutGroupData");
+            _layoutGroupData = serializedObject.FindProperty("layoutGroupData");
 
             // Get all inspected objects
             _objects = targets;
             // initialize _Buttons array
-            var gridLayoutGroups = GetInspected<FlexibleUIGridLayoutGroup>();
+            var layoutGroups = GetInspected<FlexibleUILayoutGroup>();
             // Call OnSkinUI() for each inspected object
-            foreach (var t in gridLayoutGroups)
+            foreach (var t in layoutGroups)
             {
                 t.OnSkinUI();
             }
@@ -31,19 +31,19 @@ namespace Assets.Editor.FlexibleUIEditor
             serializedObject.Update();
 
             GUI.enabled = false;
-            EditorGUILayout.ObjectField("Script", MonoScript.FromMonoBehaviour((FlexibleUIGridLayoutGroup)target), typeof(FlexibleUIGridLayoutGroup), false);
+            EditorGUILayout.ObjectField("Script", MonoScript.FromMonoBehaviour((FlexibleUILayoutGroup)target), typeof(FlexibleUILayoutGroup), false);
             GUI.enabled = true;
 
             EditorGUI.BeginChangeCheck();
-            EditorGUILayout.PropertyField(_gridLayoutGroupData);
+            EditorGUILayout.PropertyField(_layoutGroupData);
             if (!EditorGUI.EndChangeCheck()) return;
             serializedObject.ApplyModifiedProperties();
             // initialize _Buttons array
-            var gridLayoutGroups = GetInspected<FlexibleUIGridLayoutGroup>();
+            var layoutGroups = GetInspected<FlexibleUILayoutGroup>();
             // Call OnSkinUI() for each inspected object
-            for (var i = 0; i < gridLayoutGroups.Length; i++)
+            for (var i = 0; i < layoutGroups.Length; i++)
             {
-                gridLayoutGroups[i].OnSkinUI();
+                layoutGroups[i].OnSkinUI();
                 EditorUtility.SetDirty(_objects[i]);
             }
         }

@@ -3,7 +3,7 @@ using Assets.Scripts.FlexibleUI;
 using UnityEditor;
 using UnityEngine.UI;
 
-namespace Assets.Editor.FlexibleUIEditor
+namespace Assets.Editor.FlexibleUI
 {
     [CustomEditor(typeof(FlexibleUIButtonData))]
     [CanEditMultipleObjects]
