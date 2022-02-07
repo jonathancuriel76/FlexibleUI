@@ -10,3 +10,4 @@ Project is using Unity 2020.3.25 but scripts should be useable in older versions
 5. Now any Image that points to that Data will have it's settings updated by the Scriptable Object Data.
 
 * See Sample Scene in the project for examples of Image, Button and Text Mesh Pro (TMP) Data being used.
+* If you want to only install the scripts then download the FlexibleUI package and import into your project.
